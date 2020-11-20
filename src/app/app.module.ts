@@ -3,12 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { QueuePageComponent } from './queue-page/queue-page.component';
-import { QueueItemComponent } from './queue-item/queue-item.component';
+import { QueuePageComponent } from './queue/queue-page/queue-page.component';
+import { QueueItemComponent } from './queue/queue-item/queue-item.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { QueueEditComponent } from './queue-edit/queue-edit.component';
+import { QueueEditComponent } from './queue/queue-edit/queue-edit.component';
 import {FormsModule} from "@angular/forms";
-import { SafePipe } from './safe.pipe';
+import { SafePipe } from './misc/safe.pipe';
+import { SlidePreviewComponent } from './queue/slide-preview/slide-preview.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SafePipe } from './safe.pipe';
     QueueItemComponent,
     QueueEditComponent,
     SafePipe,
+    SlidePreviewComponent,
   ],
   imports: [
     BrowserModule,

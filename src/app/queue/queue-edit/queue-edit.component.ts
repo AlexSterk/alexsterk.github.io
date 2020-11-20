@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {LocalStorageService} from "../local-storage.service";
+import {LocalStorageService} from "../../misc/local-storage.service";
 import {SlideConfig} from "../slide-config";
 import Timeout = NodeJS.Timeout;
 

@@ -1,5 +1,5 @@
 import {EventEmitter, Injectable} from '@angular/core';
-import {defaultConfig, SlideConfig} from "./slide-config";
+import {defaultConfig, SlideConfig} from "../queue/slide-config";
 
 const CONFIG_KEY = 'slideConfig';
 

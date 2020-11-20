@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {QueueItem} from "../queue-item/queue-item.component";
 import {animate, style, transition, trigger} from "@angular/animations";
 import {defaultConfig, SlideConfig} from "../slide-config";
-import {LocalStorageService} from "../local-storage.service";
+import {LocalStorageService} from "../../misc/local-storage.service";
 import Timeout = NodeJS.Timeout;
 
 @Component({
