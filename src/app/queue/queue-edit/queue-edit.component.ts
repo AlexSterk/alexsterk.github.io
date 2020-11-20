@@ -19,6 +19,7 @@ export class QueueEditComponent implements OnInit {
 
   config: SlideConfig;
   selected = 0;
+  saving;
 
   ngOnInit(): void {
     this.config = this.store.config;
@@ -26,10 +27,11 @@ export class QueueEditComponent implements OnInit {
   }
 
   save() {
+    this.saving = true;
     clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
-      console.log("Saving config");
       this.store.save(this.config);
+      this.saving = false;
     }, 1000);
   }
 
