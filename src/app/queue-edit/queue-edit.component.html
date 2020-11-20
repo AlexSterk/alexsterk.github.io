@@ -1,0 +1,16 @@
+<div class="main">
+  <div class="grid">
+    <ng-container *ngFor="let item of config.items; let i = index">
+      <input type="url" [(ngModel)]="item.background" (ngModelChange)="save()">
+      <input type="color" [(ngModel)]="item.color" (ngModelChange)="save()">
+      <button (click)="config.items.splice(i, 1); save()">Remove</button>
+    </ng-container>
+  </div>
+  <span class="add"><button (click)="addItem()">Add image</button></span>
+  <span>Interval: <input type="number" [(ngModel)]="config.interval" (ngModelChange)="save()"></span>
+  <div class="preview">
+    <div class="inner">
+      <iframe src="/queue/preview/1"></iframe>
+    </div>
+  </div>
+</div>

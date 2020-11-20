@@ -1,5 +1,5 @@
 <div class="main">
-  <ng-container *ngFor="let item of items; let i = index">
+  <ng-container *ngFor="let item of config.items; let i = index">
     <app-queue-item *ngIf="currentItem === i" [background]="item.background" [color]="item.color" [@fade]></app-queue-item>
   </ng-container>
 </div>

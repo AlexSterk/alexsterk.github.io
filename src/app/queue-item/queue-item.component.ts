@@ -14,8 +14,6 @@ export interface QueueItem {
 })
 export class QueueItemComponent implements OnChanges {
 
-  constructor() { }
-
   @Input() background;
   @Input() color;
 

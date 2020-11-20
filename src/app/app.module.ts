@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { QueuePageComponent } from './queue-page/queue-page.component';
 import { QueueItemComponent } from './queue-item/queue-item.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { QueueEditComponent } from './queue-edit/queue-edit.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     QueuePageComponent,
     QueueItemComponent,
+    QueueEditComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
