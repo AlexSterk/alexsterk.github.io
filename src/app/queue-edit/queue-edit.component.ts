@@ -18,6 +18,7 @@ export class QueueEditComponent implements OnInit {
   }
 
   config: SlideConfig;
+  selected = 0;
 
   ngOnInit(): void {
     this.config = this.store.config;

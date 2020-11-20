@@ -8,6 +8,7 @@ import { QueueItemComponent } from './queue-item/queue-item.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { QueueEditComponent } from './queue-edit/queue-edit.component';
 import {FormsModule} from "@angular/forms";
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {FormsModule} from "@angular/forms";
     QueuePageComponent,
     QueueItemComponent,
     QueueEditComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,

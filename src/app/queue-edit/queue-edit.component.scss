@@ -1,5 +1,12 @@
 .main {
-  margin: 20px;
+  padding: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  overflow: auto;
+  box-sizing: border-box;
 
   .grid {
     display: grid;
@@ -20,7 +27,7 @@
 
   .preview {
     margin-top: 20px;
-    width: 800px;
+    width: 1200px;
 
     .inner {
       background: blue;
