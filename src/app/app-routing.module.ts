@@ -7,7 +7,8 @@ import {SlidePreviewComponent} from "./queue/slide-preview/slide-preview.compone
 const routes: Routes = [
   {path: 'queue', component: QueuePageComponent},
   {path: 'queue/edit', component: QueueEditComponent},
-  {path: 'queue/preview/:id', component: SlidePreviewComponent}
+  {path: 'queue/preview/:id', component: SlidePreviewComponent},
+  {path: '**', redirectTo: 'queue', pathMatch: 'full'}
 ];
 
 @NgModule({
