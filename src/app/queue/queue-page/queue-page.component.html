@@ -2,4 +2,5 @@
   <ng-container *ngFor="let item of config.items; let i = index">
     <app-queue-item *ngIf="currentItem === i" [background]="item.background" [color]="item.color" [@fade]></app-queue-item>
   </ng-container>
+  <div class="clock">{{time}}</div>
 </div>

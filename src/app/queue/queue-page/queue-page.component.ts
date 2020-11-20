@@ -23,6 +23,7 @@ export class QueuePageComponent implements OnInit {
 
   currentItem = 0;
   config: SlideConfig = defaultConfig;
+  currentTime: Date;
 
   ngOnInit(): void {
     this.config = this.store.config;
@@ -30,6 +31,7 @@ export class QueuePageComponent implements OnInit {
     this.store.ConfigChanged.subscribe(c => {
       this.config = c;
     });
+    setInterval(() => this.currentTime = new Date(), 1000);
   }
 
   updateItem() {
@@ -39,6 +41,10 @@ export class QueuePageComponent implements OnInit {
   runTimer() {
     this.updateItem();
     setTimeout(() => this.runTimer(), this.config.interval * 1000);
+  }
+
+  get time(): string {
+    return this.currentTime.toLocaleTimeString();
   }
 
 }
