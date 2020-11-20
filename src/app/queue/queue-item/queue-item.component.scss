@@ -7,6 +7,7 @@
   filter: blur(5px);
   transform: scale(1.01);
   background-size: cover;
+  background-position: center;
 }
 
 .overlay {
@@ -29,12 +30,14 @@
   justify-content: center;
   align-items: center;
   color: var(--color);
-  -webkit-text-stroke: 4.5px var(--color-darker);
+  -webkit-text-stroke: 0.2vw var(--color-darker);
   font-weight: 600;
   font-size: $fs;
   line-height: 6vw;
+  letter-spacing: 2px;
 
   .large {
+    -webkit-text-stroke: 0.4vw var(--color-darker);
     font-size: $fs * 2;
     margin-bottom: 5vw;
   }
