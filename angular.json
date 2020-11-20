@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "gh-pages"
+  "defaultProject": "gh-pages",
+  "cli": {
+    "analytics": false
+  }
 }

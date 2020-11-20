@@ -1,0 +1,41 @@
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  background-image: var(--background);
+  filter: blur(5px);
+  transform: scale(1.01);
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  background: white;
+  opacity: 0.15;
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  $fs: 6vw;
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color);
+  -webkit-text-stroke: 4px var(--color-darker);
+  font-weight: 600;
+  font-size: $fs;
+  line-height: 6vw;
+
+  .large {
+    font-size: $fs * 2;
+    margin-bottom: 5vw;
+  }
+}
