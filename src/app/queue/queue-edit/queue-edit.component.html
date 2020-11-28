@@ -1,10 +1,12 @@
 <div class="main">
-  <div class="grid">
-    <ng-container *ngFor="let item of config.items; let i = index">
-      <input type="url" [(ngModel)]="item.background" (ngModelChange)="save()" (click)="selected = i">
-      <input type="color" [(ngModel)]="item.color" (ngModelChange)="save()" (click)="selected = i">
+  <div class="grid" cdkDropList cdkDropListLockAxis="y" (cdkDropListDropped)="drop($event)">
+    <div class="gridItem" *ngFor="let item of config.items; let i = index" cdkDrag (click)="selected = i" cdkDragBoundary=".grid">
+      <div class="dragHandle" cdkDragHandle [style.background]="item.color"></div>
+      <input type="url" [(ngModel)]="item.background" (ngModelChange)="save()">
+      <input type="color" [(ngModel)]="item.color" (ngModelChange)="save()">
       <button (click)="config.items.splice(i, 1); save(); selected = 0">Remove</button>
-    </ng-container>
+      <div *cdkDragPreview [style.background]="item.color"></div>
+    </div>
   </div>
   <span class="add"><button (click)="addItem()">Add image</button></span>
   <span class="add">Interval: <input type="number" [(ngModel)]="config.interval" (ngModelChange)="save()"></span>

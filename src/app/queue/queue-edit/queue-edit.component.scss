@@ -10,14 +10,27 @@
 
   .grid {
     display: grid;
-    grid-template-columns: 5fr 1fr auto;
-    grid-row-gap: 10px;
-    grid-column-gap: 15px;
-
+    grid-gap: 10px;
     margin-bottom: 10px;
 
-    input {
-      width: 100%;
+    .gridItem {
+      display: grid;
+      grid-template-columns: auto 5fr 1fr auto;
+      grid-row-gap: 10px;
+      grid-column-gap: 15px;
+      height: 27px;
+
+      .dragHandle {
+        width: 27px;
+        //background: #c8c5c5;
+        border-radius: 4px;
+        cursor: grab;
+        height: 27px;
+      }
+
+      input {
+        width: 100%;
+      }
     }
   }
 
@@ -54,4 +67,11 @@
       height: 100%;
     }
   }
+}
+
+.cdk-drag-preview {
+  width: 27px;
+  height: 27px;
+  //background: lightgray;
+  border-radius: 4px;
 }

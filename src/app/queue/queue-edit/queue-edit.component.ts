@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {LocalStorageService} from "../../misc/local-storage.service";
-import {SlideConfig} from "../slide-config";
+import {LocalStorageService} from '../../misc/local-storage.service';
+import {SlideConfig} from '../slide-config';
 import Timeout = NodeJS.Timeout;
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 
 
@@ -26,7 +27,7 @@ export class QueueEditComponent implements OnInit {
     this.store.ConfigChanged.subscribe(c => this.config = c);
   }
 
-  save() {
+  save(): void {
     this.saving = true;
     clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
@@ -35,11 +36,16 @@ export class QueueEditComponent implements OnInit {
     }, 1000);
   }
 
-  addItem() {
+  addItem(): void {
     this.config.items.push({
-      background: "",
-      color: "#FFFFFF"
+      background: '',
+      color: '#FFFFFF'
     });
+    this.save();
+  }
+
+  drop(event: CdkDragDrop<string[]>): void {
+    moveItemInArray(this.config.items, event.previousIndex, event.currentIndex);
     this.save();
   }
 
