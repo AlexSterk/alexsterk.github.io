@@ -45,13 +45,12 @@
     .inner {
       $checkerboard-size: 200px;
       $half-that: $checkerboard-size / 2;
-      background-image:
-        linear-gradient(45deg, #ccc 25%, transparent 25%),
-        linear-gradient(135deg, #ccc 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #ccc 75%),
-        linear-gradient(135deg, transparent 75%, #ccc 75%);
+      background-image: linear-gradient(45deg, #ccc 25%, transparent 25%),
+      linear-gradient(135deg, #ccc 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #ccc 75%),
+      linear-gradient(135deg, transparent 75%, #ccc 75%);
       background-size: $checkerboard-size $checkerboard-size; /* Must be a square */
-      background-position:0 0, $half-that 0, $half-that 0-$half-that, 0px $half-that; /* Must be half of one side of the square */
+      background-position: 0 0, $half-that 0, $half-that 0-$half-that, 0px $half-that; /* Must be half of one side of the square */
       width: 100%;
       padding-top: 56.25%;
       position: relative;
